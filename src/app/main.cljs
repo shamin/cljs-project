@@ -2,18 +2,18 @@
   (:require [reagent.core :as r]
             [shared.view :as view]
             [app.router :as router]
-            [reitit.frontend.easy :as rfe]))
+            [reitit.frontend.easy :as rfe]
+            [app.home.views :as home]
+            [app.second-page.views :as second-page]
+            [app.core.layout.topbar :as topbar]))
 
 (defn landing-page
   []
   (let [{{:keys [view name]} :data} @router/state]
     [:div
-      "Hello world"
-      name
+      [topbar/topbar {:current-page name}]
       [:br]
-      (if (= ::second-page name)
-        [:div "Second page"]
-        (view @router/state))]))
+      (view @router/state)]))
 
 
 (defn ^:dev/after-load start

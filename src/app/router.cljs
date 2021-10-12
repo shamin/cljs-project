@@ -2,7 +2,9 @@
     (:require [reitit.frontend :as rf]
               [reagent.core :as r]
               [reitit.coercion.spec :as rss]
-              [shared.view :as views]))
+              [shared.view :as views]
+              [app.home.views :as home]
+              [app.second-page.views :as second-page]))
 
 (def state (r/atom nil))
 
@@ -11,8 +13,8 @@
   (reset! state new-match))
 
 (def routes
-  [["/" {:name ::homepage :view views/page}]
-   ["/second-page" {:name ::second-page :view views/second-page}]])
+  [["/" {:name home/route :view home/view}]
+   ["/second-page" {:name second-page/route :view second-page/view}]])
 
 (def router
   (rf/router routes {:data {:coercion rss/coercion}}))
