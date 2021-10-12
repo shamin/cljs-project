@@ -1,5 +1,3 @@
-(ns shared.core.c.button.button_story
-  (:require [reagent.core :as r]))
+(ns shared.core.c.button.button_story)
 
-(defn button [{:keys [on-click]} & contents]
-  [:button {:on-click on-click} contents])
+;; A place for storybook

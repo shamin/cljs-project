@@ -1,6 +1,6 @@
 (ns app.main
   (:require [reagent.core :as r]
-            [shared.view :as view]
+            [day8.re-frame.http-fx]
             [app.router :as router]
             [reitit.frontend.easy :as rfe]
             [app.home.views :as home]

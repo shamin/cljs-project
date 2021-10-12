@@ -2,7 +2,6 @@
     (:require [reitit.frontend :as rf]
               [reagent.core :as r]
               [reitit.coercion.spec :as rss]
-              [shared.view :as views]
               [app.home.views :as home]
               [app.second-page.views :as second-page]))
 

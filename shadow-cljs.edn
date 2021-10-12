@@ -3,7 +3,10 @@
 
  :dependencies [[binaryage/devtools "0.9.10"]
                 [reagent "0.8.1"]
-                [metosin/reitit "0.5.15"]]
+                [metosin/reitit "0.5.15"]
+                [re-frame "1.2.0"]
+                [cljs-ajax "0.8.4"]
+                [day8.re-frame/http-fx "0.2.3"]]
 
  :nrepl        {:port 3333}
 
