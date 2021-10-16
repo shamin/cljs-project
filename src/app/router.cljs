@@ -13,7 +13,7 @@
 
 (def routes
   [["/" {:name home/route :view home/view}]
-   ["/second-page" {:name second-page/route :view second-page/view}]])
+   ["/second-page" second-page/routes]])
 
 (def router
   (rf/router routes {:data {:coercion rss/coercion}}))

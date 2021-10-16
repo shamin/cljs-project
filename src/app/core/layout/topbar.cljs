@@ -20,4 +20,7 @@
                       :current-page current-page}]
         [topbar-item {:route second-page/route
                       :name "Second Page"
+                      :current-page current-page}]
+        [topbar-item {:route second-page/route-second
+                      :name "Second Page 2"
                       :current-page current-page}]])
