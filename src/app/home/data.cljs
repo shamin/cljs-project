@@ -36,3 +36,13 @@
   (fn [db [_]]
     (or (get-in db todo-form-path)
         (re/dispatch [::fetch-todos]))))
+
+
+(def home-details-form-path [:home :details])
+
+(re/reg-event-db
+  ::submit-details-form
+  (fn [db [_ result]]
+    (println "Home details form data" (get-in db home-details-form-path))
+    (-> db
+      (assoc-in (conj home-details-form-path :submitting?) true))))
