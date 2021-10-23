@@ -5,7 +5,8 @@
             [reitit.frontend.easy :as rfe]
             [app.home.views :as home]
             [app.second-page.views :as second-page]
-            [app.core.layout.topbar :as topbar]))
+            [app.core.layout.topbar :as topbar]
+            [reframe-viewer.main :as rv]))
 
 (defn landing-page
   []
@@ -22,8 +23,7 @@
   (r/render [landing-page]
             (.getElementById js/document "app")))
 
-
-
 (defn ^:export main
   []
-  (start))
+  (start)
+  (rv/init))

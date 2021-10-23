@@ -9,7 +9,7 @@
   (let [todos (re/subscribe [::data/todos])]
     [:div
       [:p "Welcome Home" (str @todos)]
-      [c/button {:on-click #(re/dispatch [::data/fetch-todos])} "Reload"]
+      [c/button {:on-click #(re/dispatch [:todos/fetch-todos])} "Reload"]
       [:br]
       [:br]
       [c/input {:form-path data/home-details-form-path :name :fullname}]
