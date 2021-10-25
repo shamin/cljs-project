@@ -5,7 +5,7 @@
             [cljs.reader :as reader]))
 
 (defn send-db []
-  (channel/send-message @db/app-db))
+  (channel/send-message "refreshDb" @db/app-db))
 
 (defn dispatch-event [d]
   (println "Message dispatch-event" (:reframe-event d))

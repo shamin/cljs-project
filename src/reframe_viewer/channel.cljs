@@ -1,8 +1,8 @@
 (ns reframe-viewer.channel
   (:require [clojure.walk :as walk]))
 
-(defn send-message [message]
-  (->> {:detail message}
+(defn send-message [type data]
+  (->> {:detail {:event type :data data}}
        (clj->js)
        (js/CustomEvent. "reframe-viewer-event")
        (js/window.dispatchEvent)))
