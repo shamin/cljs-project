@@ -6,7 +6,8 @@
                 [metosin/reitit "0.5.15"]
                 [re-frame "1.2.0"]
                 [cljs-ajax "0.8.4"]
-                [day8.re-frame/http-fx "0.2.3"]]
+                [day8.re-frame/http-fx "0.2.3"]
+                [org.clojars.shamin616/reframe-viewer "0.1.1-SNAPSHOT"]]
 
  :nrepl        {:port 3333}
 
